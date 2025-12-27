@@ -1,0 +1,32 @@
+remove duplicate elements from string c++
+delete a milddle node from singly linked list
+differnce between mutex and semaphonre
+what are c++lambda functions
+write a template class for performing arithmatic operations c++
+Object slicing
+Stack unwinding
+write custom vector library and use it
+shallo copy deep copy
+operator Overloading  programs
+virtual destructor
+even odd print multithreading
+Producer/consumer problem.
+reference vs pointers.
+lvalue vs rvalue references.
+Smart pointers write.
+Unique pointer/Weak pointer/shared pointer
+Use case of design pattern that is used. (Explain any one design pattern)
+Vtable working vand vptr
+Types of inheritance.
+explain any on STL and its differnt functions.
+Data Structure practise.
+RAII
+Rule of Five/rule of three.
+Static variables c++
+
+
+
+
+
+
+

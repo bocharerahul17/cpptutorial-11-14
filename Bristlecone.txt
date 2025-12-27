@@ -1,0 +1,92 @@
+#include <iostream>
+#include <thread>
+#include <stdexcept>
+
+void threadFunction() {
+    throw std::runtime_error("Error occurred");
+}
+
+
+Question 1: Implement a Thread Pool in C++
+Design and implement a simple thread pool in C++. The thread pool should be able to handle multiple tasks concurrently. Consider using the C++11 threads and condition variables.
+
+Your implementation should support:
+
+Dynamic addition of tasks
+Graceful shutdown of the thread pool
+Error handling in case of task failures
+#include <iostream>
+#include <thread>
+#include <vector>
+#include <queue>
+#include <functional>
+#include <condition_variable>
+#include <mutex>
+
+class ThreadPool {
+public:
+    ThreadPool(size_t);
+    template<class F>
+    void enqueue(F f);
+    ~ThreadPool();
+private:
+    std::vector<std::thread> workers;
+    std::queue<std::function<void()>> tasks;
+    std::mutex queue_mutex;
+    std::condition_variable cv;
+    bool stop;
+};
+
+
+
+
+Write a C++ program that simulates a deadlock situation using two or more threads. Demonstrate how a deadlock occurs and then modify it to resolve the deadlock by using mutexes correctly.
+
+The program should include:
+
+Two threads attempting to acquire locks on two shared resources
+A method to prevent deadlocks
+#include <thread>
+#include <mutex>
+
+std::mutex m1, m2;
+
+void threadFunction1() {
+    m1.lock();
+    m2.lock();
+    // Critical section
+    m2.unlock();
+    m1.unlock();
+}
+
+
+Design a simple observer pattern implementation in C++ that allows multiple observers to watch a subject. When the subject's state changes, all observers should be notified.
+
+Requirements include:
+
+Observer interface
+Subject class that manages observers
+class Observer {
+public:
+    virtual void update() = 0;
+};
+
+class Subject {
+public:
+    void attach(Observer* observer);
+    void notify();
+};
+
+
+
+#include <iostream>
+#include <thread>
+#include <stdexcept>
+
+void threadFunction() {
+    throw std::runtime_error("Error occurred");
+}
+
+
+move semantics uses
+RAII
