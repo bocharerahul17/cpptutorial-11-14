@@ -19,6 +19,11 @@ struct API {
      }
      static int MAJOR;
      static int MINOR;
+
+    static int  getvarvalue() {
+        return MAJOR;
+        
+    }
      
      
 };
@@ -30,6 +35,7 @@ int main()
     // API instance;
     // instance.MAJOR =1;
     std::cout << API::MAJOR << std::endl;
+   std::cout<<API::getvarvalue()<<std::endl;
     
 
     return 0;
