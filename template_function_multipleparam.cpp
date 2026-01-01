@@ -32,6 +32,7 @@ void foo(T1 input1) {
 
 int main()
 {
+    //foo<int, float>(5,5.5f);
     foo<int, 5>(5);
 
     return 0;
