@@ -1,28 +1,90 @@
-remove duplicate elements from string c++
-delete a milddle node from singly linked list
-differnce between mutex and semaphonre
-what are c++lambda functions
-write a template class for performing arithmatic operations c++
-Object slicing
-Stack unwinding
-write custom vector library and use it
+....................
+CPP concepts/Static
+....................
+reference vs pointers.
+lvalue vs rvalue references.(std::move)
+Static variables c++
+What are SOLID princliples
+Stat_cast/Dynamic cast
+constexpr, Functor
+
+
+.......................
+OOPS
+.......................
 shallo copy deep copy
 operator Overloading  programs
 virtual destructor
+Vtable working and vptr
+Types of inheritance.
+Object slicing
+Rule of Five/rule of three.
+Interface/Abstract class
+
+
+
+................
+Multithreading
+...............
+differnce between mutex and semaphonre
 even odd print multithreading
 Producer/consumer problem.
-reference vs pointers.
-lvalue vs rvalue references.
+
+................
+Smart Pointere
+.................
 Smart pointers write.
 Unique pointer/Weak pointer/shared pointer
-Use case of design pattern that is used. (Explain any one design pattern)
-Vtable working vand vptr
-Types of inheritance.
-explain any on STL and its differnt functions.
-Data Structure practise.
 RAII
-Rule of Five/rule of three.
-Static variables c++
+
+
+...........
+STL
+...........
+write custom vector library and use it
+explain any on STL and its differnt functions.
+Unordered_map / vector mostly asked
+String vs String_view()
+
+
+
+................
+Templates/Lambdas
+.................
+what are c++lambda functions
+write a template class for performing arithmatic operations c++
+
+
+.............
+Design Patterns
+................
+Use case of design pattern that is used. (Explain any one design pattern)
+CRPT design pattern and static polymorphysm
+Observer Pattern
+CRTP
+
+
+..............
+Linux and build systems
+.................
+Linux IPC mechanism(shared memory/sockets/pipes/sockets)
+linux commands used
+Cmake build system
+
+
+..................
+DSA
+..................
+remove duplicate elements from string c++
+delete a milddle node from singly linked list
+Arrays/Strings/Linked Lists
+
+
+.................
+Exception Handling 
+................
+examples Eg. diff. scenarios
+Stack unwinding
 
 
 
