@@ -1,0 +1,91 @@
+chmod -- changes file permissions
+grep--> it is used for searching text or pattern inside a file.
+		Ex. grep "error" logfiles.txt
+pwd--> shows current directory.
+ls--- list all the files present in the directory.
+root -->
+u,g,o--->owner(u), group(g), others(o)
+
+read(4), write(2), execute (1)
+
+755 means owner -rwx, group& others-rx
+
+
+
+daemon--> background process that runs witout direct user interactions such ass
+		ssh or web services.
+		
+		
+sudo--> allows a normal user to execute commands with elevated privilages as root
+
+
+The root directory (represented simply by a forward slash /) is the absolute base of the Linux filesystem hierarchy.
+
+Every file and folder on the system stems from / (e.g., /usr, /etc, /home, /var)
+
+
+Root User (The Superuser)
+The root user is the administrative account with unlimited privileges.
+
+Complete Control: Root can access, modify, or delete any file, run any command, stop system services, and manage permissions for all other users.
+
+Bypasses Security: Permission bits (rwx) do not restrict root. If a file is marked read-only, root can still overwrite or delete it.
+
+
+
+In Linux, Inter-Process Communication (IPC) refers to the mechanisms provided by the kernel to allow separate processes to share data, synchronize actions, or communicate with one another.
+
+Since every Linux process runs in its own isolated virtual address space, processes cannot directly read or write to another process's memory without kernel assistance.
+
+---
+Pipes-
+
+Pipes provide a uni-directional byte stream using a First-In, First-Out (FIFO) buffer maintained in kernel memory.
+anonymous pipes
+Names pipes
+
+Shared memory
+Shared memory is the fastest form of IPC available in Linux because it maps a region of physical memory directly into the address space of multiple processes.
+message queue
+
+Process A Address Space      Process B Address Space
++---------------------+      +---------------------+
+|      Code/Heap      |      |      Code/Heap      |
++---------------------+      +---------------------+
+| Shared Memory Region| <--> | Shared Memory Region|
++---------------------+      +---------------------+
+           \                    /
+            +------------------+
+            | Physical Memory  |
+            +------------------+
+			
+			
+Synchronization Requirement: Because access is concurrent, shared memory must be combined with synchronization primitives like POSIX semaphores or mutexes to prevent data races.
+
+APIs:
+
+POSIX (Modern): shm_open(), ftruncate(), and mmap().
+
+System V (Legacy): shmget(), shmat(), shmdt().
+
+
+message_queue
+Message queues store discrete, structured messages in a linked list maintained by the kernel.
+
+Packet-Based: Unlike pipes (which stream raw bytes), message queues preserve message boundaries.
+
+Priority Handling: Each message can be assigned a priority number. Receivers can fetch messages in FIFO order or retrieve high-priority messages first.
+Asynchronous: Writers can post messages to the queue and exit without waiting for a reader to process them immediately.
+
+APIs:
+
+POSIX: mq_open(), mq_send(), mq_receive().
+
+System V: msgget(), msgsnd(), msgrcv().
+
+Signals
+Signals are asynchronous notifications sent by the kernel or another process to inform a target process that a specific event has occurred.
+
+Minimal Payload: Traditional signals carry no data payload—just the signal number (e.g., SIGINT, SIGKILL, SIGSEGV). Real-time signals (SIGRTMIN to SIGRTMAX) can pass
+
+

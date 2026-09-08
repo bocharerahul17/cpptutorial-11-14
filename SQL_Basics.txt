@@ -1,0 +1,92 @@
+select 
+* 
+from 
+player
+
+select 
+*
+from 
+player
+where weight > =190
+
+select 
+*
+from 
+player
+order by weight 
+
+select 
+*
+from 
+player
+where weight between 190 and 100
+
+select 
+*
+from 
+player
+where player_name= 'Rahul'
+
+
+select 
+*
+from 
+player
+where player_name like 'Rahul%' (gives all names where name satarts with Rahul.)  %Rahul% -->name containing rahul
+
+
+
+
+
+select 
+player_name, birthday 
+from 
+player
+
+
+select 
+player_name as "full name", birthday
+from
+player
+
+
+
+CREATE TABLE bond(
+id INT,
+title VARCHAR(50),
+released INT,
+actor VARCHAR(30),
+director VARCHAR(30),
+box_office DECIMAL(5,1)
+);  --->  table parameters to create
+
+to delete Table---> DROP TABLE bond
+
+
+CREATE TABLE bond(
+id INT  PRIMARY KEY,
+title VARCHAR(50) UNIQUE,
+released INT NOT NULL,
+actor VARCHAR(30),
+director VARCHAR(30),
+box_office DECIMAL(5,1) DEFAULT '0.0'
+);  --->  table parameters to create   unique constratints(ENsure no dupicates or null alues
+
+
+INSERT INTO bond VALUSE(1,'DR.NO, 1962,'SEAN FJF',....)
+
+IF NOT ALL VALUES NEED TO INSERT, METION ALL REQUIRED FIELDS TO INSERT.
+
+INTERT INTO bond(id, title, released) VALUES
+(2,'',1993);
+
+TO UPDATE DATA FROM THE CLOUNS
+
+UPDATE bond
+SET actor = 'connery'
+where actor= 'sesefef'
+
+
+LTRIN,RTRIM ,TRIM---> to remove all the spaces 
+
+lenght, substring, locate used for string 
